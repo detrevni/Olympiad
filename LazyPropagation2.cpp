@@ -104,7 +104,7 @@ struct Tree{
         return Get(v * 2, tl, tm, l, min(r, tm)) +
                Get(v * 2 + 1, tm + 1, tr, max(l, tm + 1), r);
     }
-}
+};
 
 main(){
     return 0;
