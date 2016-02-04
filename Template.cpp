@@ -19,12 +19,12 @@ const ld PI = acos(0.0) * 2;
 const ll dx[] = {-1, +0, +0, +1};
 const ll dy[] = {+0, -1, +1, +0};
 
-template<typename T>
+template < typename T >
 T Sqr(T x) {
     return x * x;
 }
 
-template<class T>
+template < class T >
 ll Sz(T x) {
     return ll(x.size());
 }
@@ -68,6 +68,7 @@ inline bool IsProbablePrime(ll x){
     return 1; // -> returns 1
 }
 
-int main(){
-    return 0;
+main(){
+    return 0;   
+}
 }
