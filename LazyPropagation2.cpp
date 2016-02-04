@@ -1,3 +1,6 @@
+// Flip from l to r
+// Sum from l to r
+
 # include <bits/stdc++.h>
 
 using namespace std;
