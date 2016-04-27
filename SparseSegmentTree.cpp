@@ -27,9 +27,7 @@ const ll dx[] = {-1, 0, 0, 1};
 const ll dy[] = {0, -1, 1, 0};
 
 
-ll n;
-ll a[maxn], t[maxn], x[maxn];
-vector < ll > tt, xx;
+const ll MAX = (ll)1e5;
 
 struct node{
     node *l, *r;
@@ -69,36 +67,14 @@ struct Tree{
     }
 
     void update(ll pos, ll val){
-        update(root, 1, n, pos, val);
+        update(root, 1, MAX, pos, val);
     }
 
     ll get(ll l, ll r){
-        return get(root, 1, n, l, r);
+        return get(root, 1, MAX, l, r);
     }
 };
 
-Tree q[maxn];
-
 int main(){
-    scanf("%lld", &n);
-    for(ll i = 1; i <= n; ++i)
-        scanf("%lld %lld %lld", &a[i], &t[i], &x[i]), tt.pb(t[i]), xx.pb(x[i]);
-    sort(tt.begin(), tt.end());
-    sort(xx.begin(), xx.end());
-    tt.erase(unique(tt.begin(), tt.end()), tt.end());
-    xx.erase(unique(tt.begin(), tt.end()), tt.end());
-    for(ll i = 1; i <= n; ++i){
-        t[i] = lower_bound(tt.begin(), tt.end(), t[i]) - tt.begin() + 1;
-        x[i] = lower_bound(xx.begin(), xx.end(), x[i]) - xx.begin() + 1;
-        if(a[i] == 1){
-            q[x[i]].update(t[i], 1);
-        }
-        else if(a[i] == 2){
-            q[x[i]].update(t[i], -1);
-        }
-        else{
-            printf("%lld\n", q[x[i]].get(1, t[i]));
-        }
-    }
-    return 0;
+    
 }
